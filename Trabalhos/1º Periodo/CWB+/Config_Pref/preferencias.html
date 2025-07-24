@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferências</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="celular">
+        <header class="cabecalho-app">
+            <a href="index.html" class="link-voltar-cabecalho">
+                <span class="icone-voltar">←</span>
+            </a>
+            <h1>Preferências</h1>
+        </header>
+        <main class="conteudo-app">
+            <p class="texto-intro-preferencias">
+                Aqui você poderá ver as suas preferências e filtrar quais verá
+            </p>
+
+            <section class="item-lista-preferencia">
+                <div class="identificador-item">
+                    <img src="icones/vermelho.png" alt="Ícone Assalto" class="icone-imagem-preferencia">
+                    <span class="texto-nome-item">Assalto</span>
+                </div>
+                <label class="interruptor-novo">
+                    <input type="checkbox" id="toggle-assalto" checked>
+                    <span class="deslizante-novo"></span>
+                </label>
+            </section>
+
+            <section class="item-lista-preferencia">
+                <div class="identificador-item">
+                    <img src="icones/claro.png" alt="Ícone Furto" class="icone-imagem-preferencia">
+                    <span class="texto-nome-item">Furto</span>
+                </div>
+                <label class="interruptor-novo">
+                    <input type="checkbox" id="toggle-furto">
+                    <span class="deslizante-novo"></span>
+                </label>
+            </section>
+
+            <section class="item-lista-preferencia">
+                <div class="identificador-item">
+                    <img src="icones/roxo.png" alt="Ícone Agressão" class="icone-imagem-preferencia">
+                    <span class="texto-nome-item">Agressão</span>
+                </div>
+                <label class="interruptor-novo">
+                    <input type="checkbox" id="toggle-agressao">
+                    <span class="deslizante-novo"></span>
+                </label>
+            </section>
+
+            <section class="item-lista-preferencia">
+                <div class="identificador-item">
+                    <img src="icones/rosa.png" alt="Ícone Assédio Sexual" class="icone-imagem-preferencia">
+                    <span class="texto-nome-item">Assédio Sexual</span>
+                </div>
+                <label class="interruptor-novo">
+                    <input type="checkbox" id="toggle-assedio">
+                    <span class="deslizante-novo"></span>
+                </label>
+            </section>
+
+            <section class="item-lista-preferencia">
+                <div class="identificador-item">
+                    <img src="icones/laranja.png" alt="Ícone Acidente de Trânsito" class="icone-imagem-preferencia">
+                    <span class="texto-nome-item">Acidente de Trânsito</span>
+                </div>
+                <label class="interruptor-novo">
+                    <input type="checkbox" id="toggle-acidente">
+                    <span class="deslizante-novo"></span>
+                </label>
+            </section>
+
+        </main>
+    </div>
+    </body>
+</html>

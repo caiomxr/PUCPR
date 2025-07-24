@@ -1,0 +1,334 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #e0e0e0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.celular {
+    width: 375px;
+    height: 812px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease;
+}
+
+.cabecalho-app {
+    background-color: #828c96;
+    color: black;
+    box-sizing: border-box;
+    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -10px;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho-app h1 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    line-height: 1.2;
+    position: relative; /* Para contexto de empilhamento, se necessário */
+}
+
+.icone-menu {
+    font-size: 28px;
+    position: absolute;
+    left: 20px; /* Ajustado para o padding original do conteúdo do h1 */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Estilo para o link de voltar no cabeçalho da página de preferências */
+.link-voltar-cabecalho {
+    position: absolute;
+    left: 25px; /* Alinhado com o padding do .cabecalho-app */
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration: none;
+    color: inherit; /* Herda a cor do .cabecalho-app */
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+}
+
+.icone-voltar {
+    font-size: 28px;
+    font-weight: bold;
+    display: block; /* Para garantir que tenha dimensões corretas */
+    cursor: pointer;
+    color: black; /* Garante a cor do ícone */
+}
+
+.conteudo-app {
+    padding: 0 20px;
+    flex-grow: 1;
+    color: #212121;
+    overflow-y: auto;
+    transition: color 0.3s ease;
+}
+
+.item-configuracao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #E0E0E0;
+    font-size: 25px;
+    color: #212121;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.item-configuracao.disposicao-vertical {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.item-configuracao.disposicao-vertical > span:first-of-type,
+.item-configuracao.disposicao-vertical > div:first-of-type > span:first-of-type {
+    margin-bottom: 12px;
+}
+
+.item-configuracao.disposicao-vertical .interruptor {
+    margin-left: 0;
+}
+
+/* Estilo para o item "Preferências" que agora contém um link */
+.item-configuracao.item-preferencias {
+    justify-content: flex-start;
+    padding: 0; /* Padding será aplicado no link interno */
+}
+
+.item-configuracao.item-preferencias .link-navegacao-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 18px 0; /* Padding original do item */
+    text-decoration: none;
+    color: inherit;
+}
+
+.item-configuracao:last-child {
+    border-bottom: none;
+}
+
+.item-preferencias .seta { /* Este seletor ainda deve funcionar para a seta dentro do link */
+    color: #757575;
+    font-size: 22px;
+    margin-left: 8px;
+}
+
+.interruptor {
+    position: relative;
+    display: inline-block;
+    width: 51px;
+    height: 31px;
+}
+
+.interruptor input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.controle-deslizante {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #CDCDCD;
+    transition: .3s ease;
+    border-radius: 34px;
+}
+
+.controle-deslizante:before {
+    position: absolute;
+    content: "";
+    height: 27px;
+    width: 27px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+    transition: .3s ease;
+    border-radius: 50%;
+}
+
+.interruptor input:checked + .controle-deslizante:before {
+    transform: translateX(20px);
+}
+
+.grupo-rotulo-tema {
+    width: 100%;
+    color: #212121;
+}
+
+.grupo-rotulo-tema > span:first-of-type {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.opcoes-tema {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.texto-tema {
+    font-size: 16px;
+    color: #212121;
+    transition: color 0.3s ease;
+}
+
+.texto-intro-preferencias {
+    padding: 15px 25px 25px 25px;
+    text-align: center;
+    font-size: 20px; /* Mantendo sua alteração de tamanho de fonte */
+    color: #424242;
+    line-height: 1.5;
+}
+
+.item-lista-preferencia {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.item-lista-preferencia:last-child {
+    border-bottom: none;
+}
+
+.identificador-item {
+    display: flex;
+    align-items: center;
+}
+
+
+.icone-imagem-preferencia {
+    width: 28px;  
+    height: 28px; 
+    object-fit: contain; 
+    vertical-align: middle; 
+}
+
+.texto-nome-item {
+    margin-left: 15px;
+    font-size: 18px;
+    color: #212121;
+}
+
+.interruptor-novo {
+    position: relative;
+    display: inline-block;
+    width: 51px;
+    height: 31px;
+}
+
+.interruptor-novo input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.deslizante-novo {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    border: 1.5px solid #757575;
+    transition: .3s;
+    border-radius: 34px;
+}
+
+.deslizante-novo:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #ffffff;
+    border: 1px solid #757575;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+.interruptor-novo input:checked + .deslizante-novo {
+    background-color: #212121;
+    border-color: #212121;
+}
+
+.interruptor-novo input:checked + .deslizante-novo:before {
+    transform: translateX(20px);
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* Tema Escuro */
+.celular.tema-escuro-global {
+    background-color: #121212;
+}
+
+.celular.tema-escuro-global .conteudo-app {
+    color: #E0E0E0;
+}
+
+.celular.tema-escuro-global .item-configuracao {
+    border-bottom-color: #3A3A3A;
+    color: #E0E0E0;
+}
+
+.celular.tema-escuro-global .item-preferencias .seta {
+    color: #BDBDBD;
+}
+
+.celular.tema-escuro-global .grupo-rotulo-tema {
+    color: #E0E0E0;
+}
+
+.celular.tema-escuro-global .texto-tema {
+    color: #E0E0E0;
+}
+
+.celular.tema-escuro-global .texto-intro-preferencias {
+    color: #BDBDBD;
+}
+
+.celular.tema-escuro-global .item-lista-preferencia {
+    border-bottom-color: #3A3A3A;
+}
+
+.celular.tema-escuro-global .texto-nome-item {
+    color: #E0E0E0;
+}
+
+.celular.tema-escuro-global .deslizante-novo {
+    border: 1.5px solid #9E9E9E;
+}
+
+.celular.tema-escuro-global .deslizante-novo:before {
+    border: 1px solid #9E9E9E;
+}

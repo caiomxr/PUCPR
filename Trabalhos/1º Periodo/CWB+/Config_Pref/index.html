@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="celular">
+        <header class="cabecalho-app">
+            <h1><span class="icone-menu">≡</span> Configurações</h1>
+        </header>
+        <main class="conteudo-app">
+            <section class="item-configuracao item-preferencias">
+                <a href="preferencias.html" class="link-navegacao-item">
+                    Preferências <span class="seta">→</span>
+                </a>
+            </section>
+
+            <section class="item-configuracao disposicao-vertical">
+                Notificações
+                <label class="interruptor">
+                    <input type="checkbox" id="notificacoes-toggle">
+                    <span class="controle-deslizante"></span>
+                </label>
+            </section>
+
+            <section class="item-configuracao">
+                <div class="grupo-rotulo-tema">
+                    Tema
+                    <div class="opcoes-tema">
+                        <span class="texto-tema texto-tema-claro">Claro</span>
+                        <label class="interruptor">
+                            <input type="checkbox" id="tema-toggle">
+                            <span class="controle-deslizante"></span>
+                        </label>
+                        <span class="texto-tema texto-tema-escuro">Escuro</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
